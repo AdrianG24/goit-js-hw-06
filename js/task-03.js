@@ -15,12 +15,14 @@ const images = [
 
 const ulElem = document.querySelector(".gallery");
 
-const elements = images.map(
-  (image) =>
-    `<li class="list-item"><img src ="${image.url}" 
+const elements = images
+  .map(
+    (image) =>
+      `<li class="list-item"><img src ="${image.url}" 
     alt = "${image.alt}"
     width = ${200}></img></li>`
-);
+  )
+  .join("");
 
 ulElem.insertAdjacentHTML("afterbegin", elements);
 console.log(elements);
